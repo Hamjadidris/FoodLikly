@@ -1,0 +1,501 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    background-color: rgb(51, 51, 51);
+    font-family: 'Nunito', sans-serif;
+}
+body{
+    width: 100%;
+    height: 100%;
+}
+header{
+    width: 100%;
+    height: 12vh;
+    display: flex;
+    align-items: center;
+}
+nav{
+    height: 12vh;
+    width: 100%;
+    font-size: 2rem;
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+    gap: 5vw;
+    list-style: none;
+    background-color: #000;
+    height: 100%;
+    color: rgb(170, 170, 170);
+    display: flex;
+    align-items: center;
+}
+nav ul li,a{
+    background-color: rgba(0,0,0,0);
+}
+
+.nav-icon{
+    background-color: rgba(0,0,0,0);
+    position: fixed;
+    top: 0;
+    justify-self: flex-start;
+    height: 12vh;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.nav-icon :first-child{
+    width: 1%;
+    height: 20%;
+    background-color: #000;
+}
+.nav-icon :last-child{
+    width: 20%;
+    height: 80%;
+    background-color: #000;
+    border-radius: 45% 45% 16px 16px;
+    animation: lamp 4s ease-in-out 1 normal forwards;
+}
+.section1{
+    height: 88vh;
+    color: rgb(255, 255, 255);
+    font-size: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.section1 h1{
+    display: flex;
+    align-items: flex-end;
+    flex-basis: 35%;
+    letter-spacing: 0.5rem;
+    text-shadow: 2px 4px 2px #000;
+}
+.section1 div{
+    flex-basis: 50%;
+    width: 40%;
+    position:relative;
+}
+.changing-imgs img{
+    position: absolute;
+    top: 0;
+    width:100%;
+    height: 100%;
+    transform: scale(0);
+}
+.changing-imgs .img1{
+    animation: changing-imgs 4s ease-in-out 1s 1 normal forwards;
+}
+.changing-imgs .img2{
+    animation: changing-imgs 4s ease-in-out 5s 1 normal forwards;
+}
+.changing-imgs .img3{
+    animation: changing-imgs 4s ease-in-out 10s 1 normal forwards;
+}
+.changing-imgs .img4{
+    animation: changing-imgs 4s ease-in-out 14s 1 normal forwards;
+}
+.changing-imgs .img5{
+    animation: changing-imgs 4s ease-in-out 19s infinite normal forwards;   
+}
+.section2{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(34, 34, 34);
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.section2 h1{
+    word-spacing: 1rem;
+    text-shadow: 2px 4px 2px #000;
+    font-size: 5rem;
+    background-color: rgba(0,0,0,0);
+    display: flex;
+    align-items: center;
+    flex-basis: 25%;
+    letter-spacing: 0.3rem;
+}
+.order-container{
+    flex-basis: 70%;
+    width: 100%;
+    background-color: rgba(0,0,0,0);
+    display: flex;
+    justify-content: space-evenly;
+}
+.order-container .order{
+    background-color: rgba(0,0,0,0);
+    flex-basis: 20%;
+    height: 80%;
+    position: relative;
+    transition-duration: .5s;
+    transform: rotate(3deg);
+
+}
+.order-container .order:hover{
+    transform: translateY(-3vh);
+}    
+.top{
+    background-color: rgb(244, 115, 8);
+    position: absolute;
+    top: 0;
+    left:0.68rem;
+    width: 91%;
+    height: 1.5rem;
+    transform: skew(35deg);
+    border-left: 1px solid #000;
+}
+.side{
+    background-color: rgb(244, 115, 8);
+    width: 1rem;
+    height: 93%;
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    transform: skewY(55deg);
+    border-top: 1px solid #000;
+    
+}
+.content-container{
+    background-color: rgb(246, 138, 6);
+    width: 90%;
+    height: calc(100% - 2rem);
+    position: absolute;
+    top: 2rem;
+    left: 1.5rem;
+    box-shadow: 10px 7px 10px #000;
+    transition-duration: .5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:2vh;
+
+}
+.content-container img{
+    width: 90%;
+    background-color: rgba(0,0,0,0);
+}
+.content-container h2{
+    background-color: rgba(0,0,0,0);
+    color: #000;
+    text-shadow: 0px 1px 2px #000;
+    letter-spacing: 0.2rem;
+}
+.content-container button{
+    height: 10%;
+    width: 50%;
+    border: none;
+    border-radius: 25px;
+    background-color: #000;
+    color: rgb(170, 170, 170);
+    letter-spacing: 0.2rem;
+    box-shadow: 0 0 2px #000;
+    transition-duration: .7s;
+}
+.content-container button:hover{
+    color: #000;
+    background-color: rgba(0,0,0,0);
+    font-size:large;
+    font-weight: bold;
+}
+.content-container:hover{
+    box-shadow: 15px 11px 15px #000;
+    font-size: 1.5rem;
+}
+
+.section3{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(51, 51, 51);
+    color: rgb(255, 255, 255);
+
+}
+.section3 h1{
+    word-spacing: 1rem;
+    text-shadow: 2px 4px 2px #000;
+    font-size: 5rem;
+    background-color: rgba(0,0,0,0);
+    display: flex;
+    align-items: center;
+   justify-content: center;
+    letter-spacing: 0.3rem;
+    padding-top: 6vh;
+}
+.gallery-container{
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.gallery-container .gallery{
+    flex-basis: 26%;
+    height: 40%;
+    position: relative;
+    box-shadow: 4px 4px 1px 0 rgb(210, 2, 2), 8px 8px 1px 0 rgb(2, 210, 2), 12px 12px 1px 0 rgb(2, 82, 210), 16px 16px 1px 0  rgb(202, 45, 237);
+    transition: .5s;
+}
+.gallery .gallery-info{
+    padding: 1vh;
+    opacity: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    backdrop-filter: blur(3px);
+    position: absolute;
+    top: 0;
+    transition-duration:.7s ;
+}
+.gallery-info h2{
+    background-color: rgba(0,0,0,0);
+    letter-spacing: 0.3rem;
+    border-bottom: 2px solid #fff;
+    width: 0;
+    overflow: hidden;
+    transition: width 1s;
+}
+.gallery-info p{
+    background-color: rgba(0,0,0,0);
+}
+.gallery img{
+    width: 100%;
+    height: 100%;
+
+}
+.gallery:hover{
+    transform: scale(1.1);
+    box-shadow: 8px 8px 1px 0 rgb(210, 2, 2), 16px 16px 1px 0 rgb(2, 210, 2), 24px 24px 1px 0 rgb(2, 82, 210), 32px 32px 1px 0 rgb(202, 45, 237);
+}
+.gallery:hover .gallery-info{
+    opacity: 1;
+    background-color: rgba(0,0,0,0.2);
+}
+.gallery:hover .gallery-info h2{
+    width: 100%;
+}
+footer{
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    background-color: rgb(34, 34, 34);
+}
+footer div{
+    flex-basis: 40%;
+    background-color: rgba(0,0,0,0);
+}
+footer h1{
+    color: rgb(246, 138, 6);
+    font-size: 3rem;
+    background-color: rgba(0,0,0,0);
+}
+footer h2{
+    color: rgb(170, 170, 170);
+    background-color: rgba(0,0,0,0);
+}
+footer .email{
+    border: 2px solid rgb(244, 115, 8);
+    height: 25%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer input{
+    background-color: #fff;
+    height: 100%;
+    width: 88%;
+    border: none;
+    color: rgb(246, 138, 6);
+}
+.email button{
+    color: rgb(246, 138, 6);
+    height: 90%;
+    width: 10%;
+}
+
+footer h3{
+    flex-basis: 100%;
+    background-color: rgba(0,0,0,0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid rgb(255, 255, 255);
+    color: rgb(170, 170, 170);
+    letter-spacing: 0.3rem;
+    word-spacing: 0.3rem;
+}
+
+@keyframes changing-imgs{
+    0%{
+        transform: scale(0);
+    
+    }
+    50%{
+        transform: scale(1);
+    }
+    75%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(0);
+        transition-delay: 5s;
+    }
+}
+@keyframes lamp{
+    0%{
+        box-shadow: 0 10px 20px rgb(170, 111, 3);
+        transition: none;
+    }
+    20%{
+        box-shadow: none;
+        transition: none;
+    }
+    30%{
+        box-shadow: 0 4px 10px rgb(170, 111, 3);
+        transition: none;
+    }
+    40%{
+        box-shadow: none;
+    }
+    50%{
+        box-shadow: 0 4px 10px rgb(170, 111, 3);
+        transition: none;
+
+    }
+    60%{
+        box-shadow: none;
+    }
+    80%{
+        box-shadow: 0 10px 30px rgb(170, 111, 3);
+    }
+    100%{
+        box-shadow: 0 4px 15px rgb(170, 111, 3);
+    }
+}
+@media (max-width:600px) {
+    .nav-icon :first-child{
+        width: 3%;
+        height: 20%;
+    }    
+    .nav-icon :last-child{
+        width: 40%;
+        height: 80%;
+        border-radius: 40% 40% 10px 10px;
+    }    
+    .section1{
+        font-size: 2rem;
+        font-weight: bolder;
+    }
+    .section1 h1{
+        align-items: center;
+    }    
+    .section1 div{
+        width: 80%;
+    }
+    .section2{
+        height: max-content;
+        justify-content: center;
+        gap: 10vh;
+        padding: 10vh 0;
+
+    }
+    .section2 h1{
+        flex-basis: 10%;
+        font-size: 2rem;
+
+    }
+    .order-container{
+        width: 60%;
+        flex-wrap: wrap;
+        gap: 10vh;
+    }
+    .order-container .order{
+        height: 40vh;
+        flex-basis: 80%;
+        transform: rotate(1deg);
+    }
+    .side{
+        height: 90%;
+    }
+    .content-container{
+        gap: 0;
+        justify-content: space-evenly;
+    }
+    .content-container img{
+        height: 40%;
+        width: auto;
+    }
+    .content-container button{
+        height: 10%;
+        width: 80%;
+        border: none;
+        letter-spacing: 0;
+    }
+    .section3{
+        height: auto;
+        padding-bottom: 10vh;
+    }
+    .section3 h1{
+        font-size: 2rem;
+        letter-spacing: .1rem;
+        height: 10vh;
+        padding: 0;
+
+    }
+    .gallery-container{
+        height: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10vh;
+    }
+    .gallery-container .gallery{
+        flex-basis: 60%;
+        height: 20vh;
+    }
+    .gallery .gallery-info{
+        padding: 0;
+    }
+    .gallery-info h2{
+        letter-spacing: 0;
+        font-size: medium;
+    }
+    .gallery-info p{
+        font-size: small;
+    }
+    footer{
+        justify-content: space-evenly;
+        gap: 0;
+    }
+    footer div{
+        flex-basis: 80%;
+    }
+    footer h1{
+        font-size: 2rem;
+        text-align: center;
+    }
+    footer h2{
+        font-size: unset;
+        text-align: center;
+    }
+    .email button{
+        width: 15%;
+    }
+
+    footer h3{
+        letter-spacing: 0;
+        word-spacing: 0;
+    }
+}
